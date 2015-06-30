@@ -1,15 +1,14 @@
-# rpi-gogs-raspbian
+# rpi-drone
 
-[![dockeri.co](http://dockeri.co/image/hypriot/rpi-gogs-raspbian)](https://registry.hub.docker.com/u/hypriot/rpi-gogs-raspbian/)
+[![dockeri.co](http://dockeri.co/image/hypriot/rpi-drone)](https://registry.hub.docker.com/u/hypriot/rpi-drone/)
 
-Raspberry Pi compatible Docker Image with a minimal `gogs git` server.
+Raspberry Pi compatible Docker Image with drone.
 
 ## Details
-- [BLOG with tutorial](http://blog.hypriot.com/post/run-your-own-github-like-service-with-docker/)
 - [Source Project Page](https://github.com/hypriot)
-- [Source Repository](https://github.com/hypriot/rpi-gogs-raspbian)
+- [Source Repository](https://github.com/hypriot/rpi-drone)
 
-## Start a gogs git server
+## Start a drone.io CI server
 ```bash
 docker run -d --name my-go-git-server --publish 8022:22 --publish 3000:3000 --volume `pwd`/gogs-data/:/data hypriot/rpi-gogs-raspbian
 ```
@@ -22,11 +21,6 @@ Run all the commands from within the project root directory.
 ### Build the Docker Image
 ```bash
 make dockerbuild
-```
-
-#### Test the Docker Image
-```bash
-make testimg
 ```
 
 #### Push the Docker Image to the Docker Hub
