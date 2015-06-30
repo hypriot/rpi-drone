@@ -3,12 +3,8 @@ SHA := $(shell git rev-parse --short HEAD)
 #targz_file := $(shell cat FILEPATH)
 timestamp := $(shell date +"%Y%m%d%H%M")
 REL :=$(shell cat VERSION)        	
-default: create push
 
-create:
-	IMAGENAME=$(IMAGENAME) REL=$(REL) ./mkimage-alpine.sh
-
-docker: loadS3_and_extract dockerbuild push
+default: loadS3_and_extract dockerbuild push
 
 loadS3_and_extract:
 	aws s3 cp s3://$(AWS_BUCKET)/$(targz_file) ./binary.tar.gz
