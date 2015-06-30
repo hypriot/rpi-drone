@@ -1,6 +1,6 @@
 IMAGENAME := $(shell basename `git rev-parse --show-toplevel`)
 SHA := $(shell git rev-parse --short HEAD)
-#targz_file := $(shell cat FILEPATH)
+targz_file := $(shell cat FILEPATH)
 timestamp := $(shell date +"%Y%m%d%H%M")
 REL :=$(shell cat VERSION)        	
 
