@@ -2,9 +2,9 @@ FROM hypriot/rpi-alpine
 
 MAINTAINER Andreas Eiermann <andreas@hypriot.com>
 
-ADD drone /usr/local/bin/drone
-ADD droned /usr/local/bin/droned
-ADD lib /lib
+ADD content/drone /usr/local/bin/drone
+ADD content/droned /usr/local/bin/droned
+ADD content/lib /lib
 
 ENV DRONE_SERVER_PORT :80
 EXPOSE 80
