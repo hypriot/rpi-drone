@@ -12,7 +12,11 @@ Raspberry Pi compatible Docker Image with drone.
 
 ## Start a drone.io CI server
 ```bash
-docker run -d --name my-go-git-server --publish 8022:22 --publish 3000:3000 --volume `pwd`/gogs-data/:/data hypriot/rpi-gogs-raspbian
+touch drone.sqlite
+docker run --detach --name my-drone-server --publish 8080:80 --volume `pwd`/drone.sqlite \
+--volume /var/run/docker.sock:/var/run/docker.sock \
+--env DRONE_GOGS_URL=http://<ip of gogs server>:<port of your gogs installation> \
+--env DRONE_GOGS_SECRET=<gogs application token> hypriot/rpi-drone
 ```
 Now you can access the new gogs installation by opening `http://< IP of your Raspberry Pi>:3000` in your browser
 
