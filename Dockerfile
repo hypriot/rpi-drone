@@ -1,4 +1,4 @@
-FROM hypriot/rpi-alpine-scratch
+FROM resin/raspbian:jessie
 
 MAINTAINER Andreas Eiermann <andreas@hypriot.com>
 
