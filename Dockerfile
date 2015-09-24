@@ -1,4 +1,4 @@
-FROM resin/raspbian:jessie
+FROM resin/rpi-raspbian:jessie
 
 MAINTAINER Andreas Eiermann <andreas@hypriot.com>
 
