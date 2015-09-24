@@ -2,6 +2,11 @@ FROM resin/rpi-raspbian:jessie
 
 MAINTAINER Andreas Eiermann <andreas@hypriot.com>
 
+RUN apt-get update && \
+apt-get install -y libc6 && \
+apt-get clean && \
+rm -rf /var/lib/apt/lists/*
+
 ADD content/drone /usr/local/bin/drone
 ADD content/droned /usr/local/bin/droned
 ADD content/lib /lib
