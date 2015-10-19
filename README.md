@@ -1,8 +1,6 @@
-# rpi-drone
+# rpi-drone [![Build Status](http://armbuilder2.hypriot.com/api/badge/github.com/hypriot/rpi-drone/status.svg?branch=master)](http://armbuilder.hypriot.com/github.com/hypriot/rpi-drone)
 
-[![dockeri.co](http://dockeri.co/image/hypriot/rpi-drone)](https://registry.hub.docker.com/u/hypriot/rpi-drone/)
 
-[![Build Status](http://armbuilder.hypriot.com/api/badge/github.com/hypriot/rpi-drone/status.svg?branch=master)](http://armbuilder.hypriot.com/github.com/hypriot/rpi-drone)
 
 Raspberry Pi compatible Docker Image with drone.
 
