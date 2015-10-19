@@ -39,6 +39,6 @@ push:
 	docker rmi $(REGISTRY_URL)/$(NAMESPACE)/$(IMAGENAME):$(timestamp) || true
 	# push latest
 	docker tag -f $(NAMESPACE)/$(IMAGENAME):latest $(REGISTRY_URL)/$(NAMESPACE)/$(IMAGENAME):latest
-#	docker push $(REGISTRY_URL)/$(NAMESPACE)/$(IMAGENAME):latest
+	# docker push $(REGISTRY_URL)/$(NAMESPACE)/$(IMAGENAME):latest
 	docker rmi $(REGISTRY_URL)/$(NAMESPACE)/$(IMAGENAME):latest || true
                         	
