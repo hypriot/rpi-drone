@@ -1,3 +1,7 @@
+# DEPRECATED
+
+was used to build drone 0.3.x alpha
+
 # rpi-drone [![Build Status](http://armbuilder2.hypriot.com/api/badge/github.com/hypriot/rpi-drone/status.svg?branch=master)](http://armbuilder.hypriot.com/github.com/hypriot/rpi-drone)
 
 Raspberry Pi compatible Docker Image with drone CI server.
